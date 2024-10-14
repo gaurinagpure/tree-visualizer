@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Visualizer</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif; /* Set a default font for better readability */
+            background-color: #f9f9f9; /* Light background color */
+        }
+
+        .inputContainer {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 15rem; /* Increased width for better usability */
+            padding: 1rem; /* Add padding around the container */
+            background-color: #fff; /* White background for the input container */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+            border-radius: 8px; /* Rounded corners */
+        }
+
+        textarea {
+            resize: none;
+            width: 100%;
+            height: 5rem; /* Set a fixed height */
+            padding: 0.5rem; /* Add padding for better text spacing */
+            border: 1px solid #ccc; /* Border style */
+            border-radius: 4px; /* Rounded corners */
+            font-size: 14px; /* Font size for better readability */
+            transition: border 0.3s; /* Transition for border color on focus */
+        }
+
+        textarea:focus {
+            border-color: #007bff; /* Change border color on focus */
+            outline: none; /* Remove default outline */
+        }
+
+        .actionBtns {
+            width: 100%;
+            display: flex;
+            gap: 1rem;
+        }
+
+        button {
+            width: 5rem;
+            height: 2.5rem; /* Increased height for better clickability */
+            background-color: #007bff; /* Primary color for buttons */
+            color: #fff; /* White text color */
+            border: none; /* Remove default border */
+            border-radius: 4px; /* Rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            transition: background-color 0.3s; /* Transition for background color */
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+        }
+
+        button:focus {
+            outline: none; /* Remove default outline */
+        }
+    </style>
+</head>
+<body>
+    <div class="inputContainer">
+        <textarea class="input" rows="5"></textarea>
+        <div class="actionBtns">
+            <button class="applyBtn">Apply</button>
+            <button class="clearBtn">Clear</button>
+        </div>
+    </div>
+    <canvas></canvas>
+    <script type="module" src="./DrawTree.js"></script>
+</body>
+</html>
